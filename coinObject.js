@@ -21,24 +21,12 @@ const coin = {
             image.className = "coin heads"            
             image.src = "images/bearFront.png";
             image.alt = "bear front";
-        
-            // image.height= "400px";
-            // image.title = "Heads"
         } else if (coin.state === 1){
             image.className = "coin tails"
             image.src = "images/bearBack.png";
             image.alt = "bear back";
-            // image.height= "400px";
-            // image.title = "Tails"
         }
-        // coin.image = image
         return image;
-        // "url('img/tree.png')
-
-        // function myFunction() {
-        //     var x = document.getElementById("myImg").src;
-        //     document.getElementById("demo").innerHTML = x;
-        //   }
         
     }
     // 3. One point: Set the properties of this image element to show either face-up
@@ -50,8 +38,6 @@ function display20Flips() {
     for (let i = 1; i <= 20; i++){
         coin.flip()
         let flipResults = coin.toString()
-        // let newDiv = document.createTextNode(flipResults)
-        // document.body.appendChild(newDiv)
         results.push(flipResults)
     }
 
@@ -78,9 +64,8 @@ function display20Images() {
 results = display20Flips()
 let newText = document.createTextNode("The text result of 20 flips is: " + results)
 document.body.appendChild(newText)
-newText = document.createTextNode("The picture results of another 20 flips is: ")
+results = display20Images()
+newText = document.createTextNode("The picture results of another 20 flips is: " + results)
 document.body.appendChild(newText)
-display20Images()
 
-// document.getElementById("body").appendChild(image);
 //Image by <a href="https://pixabay.com/users/officialkaywille-444458/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=447418">Kay Wille</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=447418">Pixabay</a>

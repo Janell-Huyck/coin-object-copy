@@ -9,13 +9,4 @@ body {
 .coin {
 
     height: 150px;
-
-}
-
-.heads{
-    /* background-image: url('images/bearBack.png'); */
-}
-
-.tails{
-    /* background-image: url('images/bearFront.png') */
 }
