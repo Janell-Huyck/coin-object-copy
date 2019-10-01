@@ -38,6 +38,8 @@ function display20Flips() {
     for (let i = 1; i <= 20; i++){
         coin.flip()
         let flipResults = coin.toString()
+        let newText = document.createTextNode(flipResults)
+        document.body.appendChild(newText)
         results.push(flipResults)
     }
 
@@ -61,9 +63,13 @@ function display20Images() {
     // 5. One point: Use a loop to flip the coin 20 times, and display the results of each flip as an image on the page.  After your loop completes, return an array with result of each flip.
 }
 
-results = display20Flips()
-let newText = document.createTextNode("The text result of 20 flips is: " + results)
-document.body.appendChild(newText)
+display20Flips()
+
+//the following 3 lines removed because of instructions for the assignment.
+// results = display20Flips()
+// let newText = document.createTextNode("The text result of 20 flips is: " + results)
+// document.body.appendChild(newText)
+
 results = display20Images()
 newText = document.createTextNode("The picture results of another 20 flips is: " + results)
 document.body.appendChild(newText)
